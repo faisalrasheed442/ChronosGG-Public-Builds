@@ -1,11 +1,19 @@
 # ChronosGG — Free Gaming Zone & Cyber Café Management Software (Windows, LAN, Offline)
 
 **ChronosGG** is free, self-hosted **gaming zone management software** for running a
-**cyber café**, **net café**, or **esports lounge** on pay-per-time gaming PCs. One operator
-**Hub** runs the dashboard and billing; a lightweight **Agent** runs on every gaming PC to
-track time, show countdown alerts, and lock the machine when a session ends. Everything runs
-over your local network — fully **offline**, no cloud, no subscriptions, no internet
-required.
+**cyber café**, **net café**, or **esports lounge** on pay-per-time gaming PCs. It comes as
+**two apps**:
+
+| App | Install it on… | What it does |
+|-----|----------------|--------------|
+| 🖥️ **ChronosGG Server** | Your **counter / reception PC** (one per café) | The operator dashboard — start/stop sessions, billing, packages, reports, and a web companion. |
+| 🎮 **ChronosGG Client** | **Every gaming PC** you want to meter | Shows the countdown, plays time-up voice alerts, and locks the PC when paid time runs out. |
+
+> **Rule of thumb:** the **Server** runs where *you* sit; a **Client** runs on every PC a
+> *customer* plays on. You install the Server **once**, and the Client on **each** gaming PC.
+
+Everything runs over your local network — fully **offline**, no cloud, no subscriptions, no
+internet required.
 
 ---
 
@@ -22,72 +30,68 @@ but works for any LAN gaming center regardless of currency conventions.
 
 ## Key features
 
-- **Bill by the hour, prepaid, or packages** — flexible per-time-tracking billing with
-  per-PC rate overrides and package overage handled automatically.
+- **Bill by the hour, prepaid, or packages** — flexible per-time billing with per-PC rate
+  overrides and package overage handled automatically.
 - **Lock PCs automatically when time's up** — a full-screen lock overlay appears the moment
   a session expires, with threshold voice alerts at 10 and 5 minutes remaining.
 - **Manage every PC from your phone on the same Wi-Fi** — an embedded web companion lets
-  you open the Hub's IP address in any browser on the LAN and control sessions remotely.
+  you open the **Server's** IP address in any browser on the LAN and control sessions remotely.
 - **Daily & monthly revenue reports as PDF/CSV** — colorful branded PDF reports plus raw
   CSV export, broken down by day, month, PC, and session.
 - **Works fully offline on your LAN** — no internet connection needed to run the zone;
-  your session and revenue data stays on your own Hub PC.
-- **Bilingual English + Urdu announcements** — spoken alerts in English and Urdu with
-  selectable voice language. Both languages ship with audio today (the Urdu clips are
-  auto-generated placeholders that can be upgraded to studio recordings).
-- **PC lock & lockdown on Windows** — keyboard-hook based lockdown blocks Alt+Tab and Task
-  Manager while a PC is locked, with autostart and single-instance protection. This
-  lockdown layer is in validation and pending final verification on real Windows hardware
-  before it should be treated as fully hardened.
+  your session and revenue data stays on your own **Server** PC.
+- **Bilingual English + Urdu announcements** — spoken alerts in English and Urdu with a
+  selectable voice language. (Urdu clips currently ship as auto-generated placeholders that
+  can be upgraded to studio recordings.)
+- **PC lock & lockdown on Windows** — keyboard-hook lockdown blocks Alt+Tab and Task Manager
+  while a PC is locked, with autostart and single-instance protection.
 - **Offline admin bypass** — staff can unlock any PC with a shared admin credential even if
-  the Hub server is down, cached locally on each Agent.
-- **MAC-based PC identity** — a PC keeps its assigned number and rate even if its IP address
-  changes.
+  the Server is down, cached locally on each Client.
+- **MAC-based PC identity** — a PC keeps its assigned number and rate even if its IP changes.
 - **Self-hosted and open-source** — no accounts, no telemetry, no per-seat fees; run it on
   your own hardware and keep your data.
 
 ---
 
-## Screenshots
-
-*(Images are added at release time — placeholders below.)*
-
-- Desktop Hub dashboard — live PC grid, session controls: `docs/screenshots/hub-dashboard.png`
-- Web companion (mobile view) — remote session control from a phone: `docs/screenshots/web-companion.png`
-- Sample PDF revenue report: `docs/screenshots/report-pdf.png`
-
----
-
 ## Download & Install
 
-1. Go to the **[Releases](../../releases)** page of this repository.
-2. Download **`ChronosGG-Hub-Setup.exe`** and **`ChronosGG-Agent-Setup.exe`** (both Windows).
-3. Run **`ChronosGG-Hub-Setup.exe`** on the counter / operator PC — this installs the Hub to
-   Program Files with a Start Menu shortcut and an uninstaller. It offers an optional
-   "start on Windows" checkbox.
-4. Run **`ChronosGG-Agent-Setup.exe`** on every gaming PC you want to manage. Setup asks for
-   the **Zone Secret** shown on the Hub's Settings screen (you can leave it blank and set it
-   later) — the Agent then auto-starts automatically on every Windows boot.
-5. Agents auto-discover the Hub on the LAN — no manual IP entry needed in most setups.
+Go to the **[Releases](../../releases)** page and download the two installers:
 
-Both apps currently target **Windows**. Portable `ChronosGG-Hub.exe` / `ChronosGG-Agent.exe`
-builds (no installation, no shortcuts) are also attached to each release for advanced users.
+### 1. On the counter / reception PC → install the **Server**
+Run **`ChronosGG-Server-Setup.exe`**. It installs the operator dashboard to Program Files with a
+Start Menu shortcut and an uninstaller, and offers an optional "start on Windows" checkbox.
+Open it, and note the **Zone Secret** on the **Settings → Security & Network** screen — you'll
+type that into each gaming PC.
+
+### 2. On every gaming PC → install the **Client**
+Run **`ChronosGG-Client-Setup.exe`** on each PC you want to meter. Setup asks for the
+**Zone Secret** from the Server (you can leave it blank and set it later). The Client then
+auto-starts on every Windows boot and **auto-discovers the Server on the LAN** — no manual IP
+entry needed in most setups.
+
+Both apps target **Windows**. Portable `ChronosGG-Server.exe` / `ChronosGG-Client.exe` builds
+(no installation, no shortcuts) are also attached to each release for advanced users. Both apps
+**update themselves automatically** after install.
 
 ---
 
 ## Quick start
 
-1. Start the Hub on your counter PC; open its dashboard.
-2. Start the Agent on a gaming PC — it will appear as **Unregistered** in the Hub.
-3. Assign it a PC number from the Hub's dashboard.
-4. Start a session (rate, prepaid, or package) on that PC tile — the Agent shows the
-   countdown HUD immediately.
-5. Open `http://<hub-ip>:<port>` from your phone on the same Wi-Fi to manage sessions
+1. Install and open the **Server** on your counter PC.
+2. Install the **Client** on a gaming PC — it appears as **Unregistered** on the Server's dashboard.
+3. Assign it a PC number from the dashboard.
+4. Start a session (rate, prepaid, or package) on that PC tile — the Client shows the countdown
+   immediately.
+5. Open `http://<server-ip>:<port>` from your phone on the same Wi-Fi to manage sessions
    remotely, logging in with your admin credential.
 
 ---
 
 ## FAQ
+
+**Which app do I install where?**
+The **Server** goes on your one counter/reception PC (the operator dashboard). A **Client** goes
+on every gaming PC you want to charge for. See the table at the top.
 
 **Does it need internet?**
 No. ChronosGG runs entirely over your local network (LAN). There's no cloud dependency.
@@ -96,14 +100,14 @@ No. ChronosGG runs entirely over your local network (LAN). There's no cloud depe
 It's free.
 
 **Which OS does it run on?**
-Windows, for both the Hub and the Agent.
+Windows, for both the Server and the Client.
 
 **Can I use it on my phone?**
-Yes — the Hub includes a built-in web companion. Open the Hub's IP address from any phone
+Yes — the Server includes a built-in web companion. Open the Server's IP address from any phone
 or tablet browser on the same Wi-Fi network and log in with your admin credential.
 
 **Is my data private?**
-Yes. Everything is stored locally on the Hub PC (SQLite); nothing is sent to any external
+Yes. Everything is stored locally on the Server PC (SQLite); nothing is sent to any external
 server.
 
 ---
