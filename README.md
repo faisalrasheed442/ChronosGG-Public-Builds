@@ -60,14 +60,12 @@ Go to the **[Releases](../../releases)** page and download the two installers:
 ### 1. On the counter / reception PC → install the **Server**
 Run **`ChronosGG-Server-Setup.exe`**. It installs the operator dashboard to Program Files with a
 Start Menu shortcut and an uninstaller, and offers an optional "start on Windows" checkbox.
-Open it, and note the **Zone Secret** on the **Settings → Security & Network** screen — you'll
-type that into each gaming PC.
+That's the whole Server setup — nothing to configure.
 
 ### 2. On every gaming PC → install the **Client**
-Run **`ChronosGG-Client-Setup.exe`** on each PC you want to meter. Setup asks for the
-**Zone Secret** from the Server (you can leave it blank and set it later). The Client then
-auto-starts on every Windows boot and **auto-discovers the Server on the LAN** — no manual IP
-entry needed in most setups.
+Run **`ChronosGG-Client-Setup.exe`** on each PC you want to meter. **No secret, no IP, nothing
+to enter** — the Client auto-starts on every Windows boot, **auto-discovers the Server on the
+LAN**, locks the PC, and shows up on the dashboard ready to bill. Install and it just works.
 
 Both apps target **Windows**. Portable `ChronosGG-Server.exe` / `ChronosGG-Client.exe` builds
 (no installation, no shortcuts) are also attached to each release for advanced users. Both apps
