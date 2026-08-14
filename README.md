@@ -131,4 +131,9 @@ open-source cyber cafe software, game center management.
 
 ---
 
-**Author:** Faisal Malik
+Built by **[zylio](https://zylio.net)** — an independent software studio building fast, honest
+tools for power users and gamers.
+
+**Product page:** [zylio.net/software/chronosgg](https://zylio.net/software/chronosgg)
+
+© 2026 zylio. All rights reserved.
