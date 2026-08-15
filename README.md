@@ -131,6 +131,26 @@ open-source cyber cafe software, game center management.
 
 ---
 
+## Platforms
+
+ChronosGG runs on **Windows** and **Linux** (x86_64), and they interoperate — a Linux
+Server happily runs Windows Clients and vice versa.
+
+| Download | Use it for |
+|---|---|
+| `ChronosGG-Server-Setup.exe` | Windows counter PC |
+| `ChronosGG-Client-Setup.exe` | Windows gaming PC |
+| `ChronosGG-Server-linux-x86_64.tar.gz` | Linux counter PC — extract, run `./ChronosGG-Server` |
+| `ChronosGG-Client-linux-x86_64.tar.gz` | Linux gaming PC — extract, run `./ChronosGG-Client` |
+
+> ⚠️ **The Linux Client is not a hardened kiosk.** Wayland forbids global keyboard grabs
+> and nothing in userland can block `Ctrl+Alt+F<n>` VT switching, so the lock overlay
+> appears but keyboard shortcuts are not blocked. It deters casual use; it does not stop
+> someone who knows Linux. **Run gaming PCs on Windows**, or harden the Linux session
+> itself. The Linux **Server** has no such limitation.
+
+---
+
 Built by **[zylio](https://zylio.net)** — an independent software studio building fast, honest
 tools for power users and gamers.
 
