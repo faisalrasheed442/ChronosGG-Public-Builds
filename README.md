@@ -151,6 +151,23 @@ Server happily runs Windows Clients and vice versa.
 
 ---
 
+---
+
+## Support this project
+
+ChronosGG is built by one person, in the evenings. The running costs are a
+server, a domain and a lot of those evenings.
+
+If it saved you time or money running your zone, you can chip in:
+
+### ❤️ [patreon.com/zylio](https://www.patreon.com/zylio)
+
+**Nothing is locked behind it.** Every feature stays available to everyone,
+whether or not anybody ever contributes. There will not be a supporters-only
+build.
+
+---
+
 Built by **[zylio](https://zylio.net)** — an independent software studio building fast, honest
 tools for power users and gamers.
 
