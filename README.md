@@ -1,159 +1,157 @@
-# ChronosGG — Free Gaming Zone & Cyber Café Management Software (Windows, LAN, Offline)
+<p align="center">
+  <img src="screenshots/zonyo-logo.png" width="112" alt="zonyo">
+</p>
 
-**ChronosGG** is free, self-hosted **gaming zone management software** for running a
-**cyber café**, **net café**, or **esports lounge** on pay-per-time gaming PCs. It comes as
-**two apps**:
+# zonyo — Gaming Zone & Cyber Café Management Software (Windows, LAN, Offline)
+
+**zonyo** (formerly **ChronosGG**) is self-hosted **gaming zone management software** for
+running a **cyber café**, **net café** or **esports lounge** on pay-per-time gaming PCs. Sell
+time, lock PCs the moment it runs out, and know exactly what you earned — fully offline on
+your own network. By **[zylio](https://zylio.net)**.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="screenshots/server-floor-dark.png">
+    <img src="screenshots/server-floor-light.png" alt="zonyo Server" width="100%">
+  </picture>
+</p>
 
 | App | Install it on… | What it does |
 |-----|----------------|--------------|
-| 🖥️ **ChronosGG Server** | Your **counter / reception PC** (one per café) | The operator dashboard — start/stop sessions, billing, packages, reports, and a web companion. |
-| 🎮 **ChronosGG Client** | **Every gaming PC** you want to meter | Shows the countdown, plays time-up voice alerts, and locks the PC when paid time runs out. |
+| 🖥️ **zonyo Server** | Your **counter / reception PC** (one per café) | The operator dashboard: start and settle sessions, billing, packages, reports, and a web companion for your phone. |
+| 🎮 **zonyo Client** | **Every gaming PC** you want to charge for | Shows the countdown, warns in English + Urdu, and locks the PC when paid time runs out. |
 
 > **Rule of thumb:** the **Server** runs where *you* sit; a **Client** runs on every PC a
-> *customer* plays on. You install the Server **once**, and the Client on **each** gaming PC.
-
-Everything runs over your local network — fully **offline**, no cloud, no subscriptions, no
-internet required.
+> *customer* plays on.
 
 ---
 
-## What it is
+## Screenshots
 
-A **cyber café billing software** / **game center management** system built for real gaming
-zones: bill customers by the hour, with prepaid time, or with named packages; watch every PC
-live from one dashboard; lock a PC automatically the moment paid time runs out; and generate
-daily and monthly revenue reports without any cloud service in the loop. Built for
-**gaming café Pakistan** operators first — pricing is in **PKR**, rounded to the nearest ten —
-but works for any LAN gaming center regardless of currency conventions.
+| Floor | Start a session | Settle |
+|---|---|---|
+| ![Floor](screenshots/server-floor-light.png) | ![Start](screenshots/server-start-session-light.png) | ![Settle](screenshots/server-settle-light.png) |
+| **Reports** | **Stations** | **Dark mode** |
+| ![Reports](screenshots/server-reports-light.png) | ![Stations](screenshots/server-stations-light.png) | ![Dark](screenshots/server-floor-dark.png) |
+
+| Gaming PC: time's up | Gaming PC: countdown | Phone |
+|---|---|---|
+| ![Time's up](screenshots/client-lock-timeup.png) | ![Countdown](screenshots/client-hud.png) | ![Phone](screenshots/web-dashboard-phone-light.png) |
 
 ---
 
 ## Key features
 
-- **Bill by the hour, prepaid, or packages** — flexible per-time billing with per-PC rate
-  overrides and package overage handled automatically.
-- **Lock PCs automatically when time's up** — a full-screen lock overlay appears the moment
-  a session expires, with threshold voice alerts at 10 and 5 minutes remaining.
-- **Manage every PC from your phone on the same Wi-Fi** — an embedded web companion lets
-  you open the **Server's** IP address in any browser on the LAN and control sessions remotely.
-- **Daily & monthly revenue reports as PDF/CSV** — colorful branded PDF reports plus raw
-  CSV export, broken down by day, month, PC, and session.
-- **Works fully offline on your LAN** — no internet connection needed to run the zone;
-  your session and revenue data stays on your own **Server** PC.
-- **Bilingual English + Urdu announcements** — spoken alerts in English and Urdu with a
-  selectable voice language. (Urdu clips currently ship as auto-generated placeholders that
-  can be upgraded to studio recordings.)
-- **PC lock & lockdown on Windows** — keyboard-hook lockdown blocks Alt+Tab and Task Manager
-  while a PC is locked, with autostart and single-instance protection.
-- **Offline admin bypass** — staff can unlock any PC with a shared admin credential even if
-  the Server is down, cached locally on each Client.
-- **MAC-based PC identity** — a PC keeps its assigned number and rate even if its IP changes.
-- **Self-hosted and open-source** — no accounts, no telemetry, no per-seat fees; run it on
-  your own hardware and keep your data.
+- **Bill by the hour, packages or prepaid** — per-station prices, rounding once on the final
+  bill, and consoles / VR / pool tables as manual stations with a time-up alarm.
+- **Lock PCs automatically when time's up** — full screen on every monitor, with on-screen
+  and spoken warnings at 10 and 5 minutes. Alt+Tab, Alt+F4 and the Windows key are blocked.
+- **One screen to run the floor** — live numbers, a "Needs you now" queue, a tile per station
+  and one big key for the next step. Settle with cash received and change.
+- **English + Urdu on every gaming PC** — every customer message in two languages; the
+  Server itself speaks 23 languages, right-to-left where needed.
+- **Manage from your phone** — open the Server's address in any browser on the same Wi-Fi.
+- **Reports** — today, yesterday, this month, this year; by day, mode and station; PDF or
+  Excel. Audit log of every unlock, void and alarm.
+- **Staff unlock PIN** that works even when the Server is down, with lockout after wrong
+  tries.
+- **Zero setup on gaming PCs** — the Client finds the Server by itself. Add PCs by network
+  scan, IP or MAC from the Server.
+- **Light and dark**, automatic updates, and gaming PCs update from the Server without
+  internet.
+- **Works fully offline** — no cloud, no account, no telemetry; your data stays on your PC.
 
 ---
 
-## Download & Install
+## Download & install
 
-Go to the **[Releases](../../releases)** page and download the two installers:
+Go to the **[Releases](../../releases)** page and download:
 
-### 1. On the counter / reception PC → install the **Server**
-Run **`ChronosGG-Server-Setup.exe`**. It installs the operator dashboard to Program Files with a
-Start Menu shortcut and an uninstaller, and offers an optional "start on Windows" checkbox.
-That's the whole Server setup — nothing to configure.
+### 1. Counter / reception PC → **`zonyo-Server-Setup.exe`**
+Installs the dashboard to Program Files with a Start Menu shortcut and an uninstaller, and
+offers "start with Windows". The Floor's checklist walks you through the rest.
 
-### 2. On every gaming PC → install the **Client**
-Run **`ChronosGG-Client-Setup.exe`** on each PC you want to meter. **No secret, no IP, nothing
-to enter** — the Client auto-starts on every Windows boot, **auto-discovers the Server on the
-LAN**, locks the PC, and shows up on the dashboard ready to bill. Install and it just works.
+### 2. Every gaming PC → **`zonyo-Client-Setup.exe`**
+**Nothing to enter** — the Client starts with Windows, **finds the Server on the LAN by
+itself**, locks the PC and shows up on the dashboard ready to bill.
 
-Both apps target **Windows**. Portable `ChronosGG-Server.exe` / `ChronosGG-Client.exe` builds
-(no installation, no shortcuts) are also attached to each release for advanced users. Both apps
-**update themselves automatically** after install.
+Both apps **update themselves automatically**. Upgrading from ChronosGG keeps your settings
+and billing history.
 
 ---
 
 ## Quick start
 
 1. Install and open the **Server** on your counter PC.
-2. Install the **Client** on a gaming PC — it appears as **Unregistered** on the Server's dashboard.
-3. Assign it a PC number from the dashboard.
-4. Start a session (rate, prepaid, or package) on that PC tile — the Client shows the countdown
-   immediately.
-5. Open `http://<server-ip>:<port>` from your phone on the same Wi-Fi to manage sessions
-   remotely, logging in with your admin credential.
+2. Install the **Client** on a gaming PC — it appears on the Server as a new PC.
+3. Give it a number.
+4. Start a session (by the hour, package or prepaid) — the PC unlocks and shows the countdown.
+5. Set a web companion password under Settings, then open the address shown there from your
+   phone on the same Wi-Fi.
 
 ---
 
 ## FAQ
 
 **Which app do I install where?**
-The **Server** goes on your one counter/reception PC (the operator dashboard). A **Client** goes
-on every gaming PC you want to charge for. See the table at the top.
+The **Server** on your one counter PC. A **Client** on every gaming PC you charge for.
 
 **Does it need internet?**
-No. ChronosGG runs entirely over your local network (LAN). There's no cloud dependency.
+No. zonyo runs entirely over your local network.
 
-**What does it cost?**
-It's free.
-
-**Which OS does it run on?**
-Windows, for both the Server and the Client.
+**What about consoles and pool tables?**
+Add them as stations. They are timed and billed like PCs, and the Server sounds an alarm at
+time up because nothing can lock them.
 
 **Can I use it on my phone?**
-Yes — the Server includes a built-in web companion. Open the Server's IP address from any phone
-or tablet browser on the same Wi-Fi network and log in with your admin credential.
+Yes — the Server includes a web companion. Open it from any phone or tablet on the same Wi-Fi.
 
 **Is my data private?**
-Yes. Everything is stored locally on the Server PC (SQLite); nothing is sent to any external
-server.
+Yes. Everything is stored on the Server PC; nothing is sent anywhere.
+
+**What happened to ChronosGG?**
+It is now called zonyo. Same software, new name and a new look; installed copies update in
+place.
+
+---
+
+## Platforms
+
+zonyo runs on **Windows** and **Linux** (x86_64), and they work together — a Linux Server runs
+Windows Clients and vice versa.
+
+| Download | Use it for |
+|---|---|
+| `zonyo-Server-Setup.exe` | Windows counter PC |
+| `zonyo-Client-Setup.exe` | Windows gaming PC |
+| `zonyo-Server-linux-x86_64.tar.gz` | Linux counter PC — extract, run `./zonyo-Server` |
+| `zonyo-Client-linux-x86_64.tar.gz` | Linux gaming PC — extract, run `./zonyo-Client` |
+
+> ⚠️ **The Linux Client is not a hardened kiosk.** Wayland forbids global keyboard grabs
+> and nothing in userland can block `Ctrl+Alt+F<n>` console switching, so the lock appears
+> but keyboard shortcuts are not blocked. **Run gaming PCs on Windows.** The Linux **Server**
+> has no such limitation.
 
 ---
 
 ## Who is this for
 
 Owners and operators of **gaming zones**, **cyber cafés**, **internet cafés**, **net cafés**,
-**esports lounges**, and **gaming lounges** who need practical **PC timer** / **time-tracking**
-and **pay-per-time** billing without buying into an expensive commercial **café management
-system**. If you're searching for **cyber cafe billing software**, an **open-source cyber
-cafe software** option, or a **game center management** tool that runs fully **self-hosted**
-and **offline** with no per-seat license fees, ChronosGG is built for that use case —
-including **gaming café Pakistan** operators billing in PKR.
+**esports lounges** and **gaming lounges** who need a practical **PC timer** and
+**pay-per-time** billing without an expensive commercial **café management system**. Built
+for **gaming café Pakistan** operators first (PKR, English + Urdu), and works anywhere.
+
+**Keywords:** zonyo, ChronosGG, gaming zone management software, cyber café management,
+internet café software, net café software, esports lounge management, gaming lounge PC
+management, LAN gaming center, pay-per-time billing, PC timer, prepaid billing, package
+billing, cyber cafe billing software, PC lock software, café management system, gaming café
+Pakistan, PKR billing, self-hosted software, offline software, no-cloud software.
 
 ---
 
-**Keywords:** gaming zone management software, cyber café management, internet café software,
-net café software, esports lounge management, gaming lounge PC management, LAN gaming center,
-pay-per-time billing, time-tracking software, PC timer, prepaid billing, package billing,
-cyber cafe billing software, PC lock software, session control, café management system,
-gaming café Pakistan, PKR billing, self-hosted software, offline software, no-cloud software,
-open-source cyber cafe software, game center management.
+Built by **[zylio](https://zylio.net)** — an independent software studio building fast,
+honest tools for power users and gamers.
 
----
-
-## Platforms
-
-ChronosGG runs on **Windows** and **Linux** (x86_64), and they interoperate — a Linux
-Server happily runs Windows Clients and vice versa.
-
-| Download | Use it for |
-|---|---|
-| `ChronosGG-Server-Setup.exe` | Windows counter PC |
-| `ChronosGG-Client-Setup.exe` | Windows gaming PC |
-| `ChronosGG-Server-linux-x86_64.tar.gz` | Linux counter PC — extract, run `./ChronosGG-Server` |
-| `ChronosGG-Client-linux-x86_64.tar.gz` | Linux gaming PC — extract, run `./ChronosGG-Client` |
-
-> ⚠️ **The Linux Client is not a hardened kiosk.** Wayland forbids global keyboard grabs
-> and nothing in userland can block `Ctrl+Alt+F<n>` VT switching, so the lock overlay
-> appears but keyboard shortcuts are not blocked. It deters casual use; it does not stop
-> someone who knows Linux. **Run gaming PCs on Windows**, or harden the Linux session
-> itself. The Linux **Server** has no such limitation.
-
----
-
-Built by **[zylio](https://zylio.net)** — an independent software studio building fast, honest
-tools for power users and gamers.
-
-**Product page:** [zylio.net/software/chronosgg](https://zylio.net/software/chronosgg)
+**Product page:** [zylio.net/software/zonyo](https://zylio.net/software/zonyo)
 
 © 2026 zylio. All rights reserved.
