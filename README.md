@@ -49,7 +49,7 @@ your own network. By **[zylio](https://zylio.net)**.
 - **One screen to run the floor** — live numbers, a "Needs you now" queue, a tile per station
   and one big key for the next step. Settle with cash received and change.
 - **English + Urdu on every gaming PC** — every customer message in two languages; the
-  Server itself speaks 23 languages, right-to-left where needed.
+  Server itself speaks 30 languages, right-to-left where needed.
 - **Manage from your phone** — open the Server's address in any browser on the same Wi-Fi.
 - **Reports** — today, yesterday, this month, this year; by day, mode and station; PDF or
   Excel. Audit log of every unlock, void and alarm.
